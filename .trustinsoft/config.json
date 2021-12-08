@@ -1,0 +1,94 @@
+[
+    {
+        "name":"v0 (1 string, 2 shift values) : 2 UBs",
+        "prefix_path":"../v0",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true
+    },
+    {
+        "name":"v1 (1 string, 2 shift values) : UBs fixed!",
+        "prefix_path":"../v1",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true
+    },
+    {
+        "name":"v2 (1 string, ALL shift values) : 1 UB",
+        "prefix_path":"../v2",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true
+    },
+    {
+        "name":"v3 (1 string, ALL shift values excluding INT_MIN) : no UBs",
+        "prefix_path":"../v3",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true
+    },
+    {
+        "name":"v4 (ALL strings, ALL shift values excluding INT_MIN) : no UBs",
+        "prefix_path":"../v4",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true
+    },
+    {
+        "name":"v4 (ALL strings, ALL shift values excluding INT_MIN) : dependency analysis",
+        "prefix_path":"../v4",
+        "files":[
+            "caesar.c",
+            "main.c"
+        ],
+        "cpp-extra-args":[
+            "-I ."
+        ],
+        "machdep": "gcc_x86_64",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "val-malloc-returns-null": true,
+        "deps": true,
+        "graphdeps": true
+    }
+]
